@@ -1,5 +1,6 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createStaticNavigation } from "@react-navigation/native";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import Home from "./screens/Home";
 import SelectWeek from "./screens/SelectWeek";
@@ -39,7 +40,9 @@ const Navigation = createStaticNavigation(RootStack);
 function App() {
   return (
     <DatabaseProvider>
-      <Navigation />
+      <SafeAreaProvider>
+        <Navigation />
+      </SafeAreaProvider>
     </DatabaseProvider>
   );
 }
