@@ -5,6 +5,8 @@ import Home from "./screens/Home";
 import SelectWeek from "./screens/SelectWeek";
 import RegisterProgramWeek from "./screens/RegisterProgramWeek";
 
+import { DatabaseProvider } from "./context/Database";
+
 const RootStack = createNativeStackNavigator({
   initialRouteName: "Home",
   screens: {
@@ -18,7 +20,7 @@ const RootStack = createNativeStackNavigator({
     SelectWeek: {
       screen: SelectWeek,
       options: {
-        title: "Seleção da semana",
+        title: "Cadastro da programação",
         headerTitleAlign: "center",
       },
     },
@@ -35,7 +37,11 @@ const RootStack = createNativeStackNavigator({
 const Navigation = createStaticNavigation(RootStack);
 
 function App() {
-  return <Navigation />;
+  return (
+    <DatabaseProvider>
+      <Navigation />
+    </DatabaseProvider>
+  );
 }
 
 export default App;

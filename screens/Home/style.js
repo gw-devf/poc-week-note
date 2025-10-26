@@ -1,11 +1,6 @@
 import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
   buttonSelectWeek: {
     width: 60,
     height: 60,
@@ -21,6 +16,20 @@ const styles = StyleSheet.create({
   buttonSelectWeekText: {
     color: "#F5F5F5",
     fontSize: 32,
+  },
+  titleDay: {
+    fontSize: 18,
+    fontWeight: "500",
+    color: "#377F8C",
+    marginBottom: 12,
+  },
+  containerContentDay: {
+    gap: 4,
+  },
+  contentDay: {
+    fontSize: 14,
+    fontWeight: "500",
+    color: "#191919",
   },
 });
 
