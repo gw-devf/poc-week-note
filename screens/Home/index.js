@@ -17,6 +17,7 @@ function Home() {
     <Wrapper>
       <FlatList
         data={database}
+        contentContainerStyle={{ gap: 24 }}
         keyExtractor={(item) => item.id}
         renderItem={ListWeek}
       />

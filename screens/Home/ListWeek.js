@@ -13,13 +13,7 @@ function ListWeek({ item }) {
       <View style={styles.containerContentDay}>
         {eventList.length ? (
           eventList.map((event, index) => (
-            <Text
-              key={index}
-              style={[
-                styles.contentDay,
-                index === eventList.length - 1 && { marginBottom: 24 },
-              ]}
-            >
+            <Text key={index} style={styles.contentDay}>
               {event}
             </Text>
           ))
