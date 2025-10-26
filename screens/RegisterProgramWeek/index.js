@@ -1,6 +1,8 @@
 import { View, Text } from "react-native";
 
-function RegisterProgramWeek() {
+function RegisterProgramWeek({ route }) {
+  console.log(route.params);
+
   return (
     <View>
       <Text>RegisterProgramWeek Page</Text>
